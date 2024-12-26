@@ -1,0 +1,154 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>การบ้านตกแต่งหน้า</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0; /* เอาการ padding ออกจาก body */
+      background: linear-gradient(135deg, #ffcccb, #90caf9); /* สีพื้นหลังแบบไล่สี */
+      display: flex;
+      justify-content: center; /* จัดตำแหน่งแนวนอนให้กรอบอยู่กลาง */
+      align-items: center; /* จัดตำแหน่งแนวตั้งให้กรอบอยู่กลาง */
+      height: 100vh; /* ทำให้หน้าจอเต็ม */
+    }
+
+    .form-container {
+      background-color: #ffffff; /* สีพื้นหลังของกล่อง */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาของกล่อง */
+      width: 500px; /* ความกว้างของกล่อง */
+    }
+
+    .form-group img {
+      width: 150px; /* ขนาดของรูป */
+      height: 150px;
+      border-radius: 8px; /* ทำมุมรูปให้มน */
+      object-fit: cover; /* ทำให้รูปไม่ยืดหรือบิดเบี้ยว */
+      float: right; 
+      margin-right: 100px; /*ระยะห่างระหว่างรูปกับฟอร์ม */ 
+    
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      margin-right: 10px;
+      white-space: nowrap;
+    }
+
+    .form-group input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      flex: 1; /* ทำให้ input ขยายได้ */
+    }
+
+    .form-group .age-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-group .age-group input {
+      width: 50px;
+      margin-right: 5px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 15px 100px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px; /* ปรับมุมของปุ่มให้มน */
+    }
+
+    .confirm-btn {
+      background-color: rgb(120, 252, 32);
+      color: white;
+    }
+
+    .cancel-btn {
+      background-color: rgb(252, 32, 43);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <form id="authen-form">
+    <div class="form-container">
+
+        <div class="form-group img">
+            <div class="col-md-1 text-md-right" >
+                <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            </div>     
+        </div>
+        
+    
+
+      <div class="form-group">
+        <label for="pick up">นัดรับบริการที่ :</label>
+        <input type="text" id="pick up" name="pick up" style="width: 200px;">
+      </div>
+
+      <div class="form-group">
+        <label for="DateService">วันที่รับบริการ :</label>
+        <input type="date" id="DateService" name="DateService" style="width: 200px;">
+        
+        <label for="TimeService">เวลา :</label>
+        <div class="age-group">
+          <input type="time" id="TimeService" name="TimeService">
+          <span>น.</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="HN">HN :</label>
+        <input type="text" id="HN" name="HN" style="width: 200px;">
+      </div>
+
+      <div class="form-group">
+        <label for="name">ชื่อ-สกุล :</label>
+        <input type="text" id="name" name="name" style="width: 200px;">
+        
+        <div class="age-group">
+          <label for="age">อายุ :</label>
+          <input type="text" id="age" name="age">
+          <span>ปี</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="telephone">เบอร์โทรศัพท์ :</label>
+        <input type="text" id="telephone" name="telephone" style="width: 200px;">
+      </div>
+
+      <div class="form-group">
+        <label for="id">เลขประจำตัวประชาชน :</label>
+        <input type="text" id="telephone" name="id" style="width: 200px;">
+      </div>
+
+      <div class="form-group">
+        <label for="docker">แพทย์ผู้นัด :</label>
+        <input type="text" id="docker" name="docker" style="width: 200px;">
+      </div>
+
+      <div class="form-group">
+        <label for="rights">สิทธิการรักษา :</label>
+        <input type="text" id="rights" name="rights" style="width: 200px;">
+      </div>
+
+      <button class="confirm-btn">ยืนยัน</button>
+      <button class="cancel-btn">ยกเลิก</button>
+    </div>
+  </form>
+</body>
+</html>
