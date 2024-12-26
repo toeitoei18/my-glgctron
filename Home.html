@@ -7,21 +7,27 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      font-size: 20px;
       margin: 0;
       padding: 0; /* เอาการ padding ออกจาก body */
       background: linear-gradient(135deg, #ffcccb, #90caf9); /* สีพื้นหลังแบบไล่สี */
+      
       display: flex;
       justify-content: center; /* จัดตำแหน่งแนวนอนให้กรอบอยู่กลาง */
       align-items: center; /* จัดตำแหน่งแนวตั้งให้กรอบอยู่กลาง */
       height: 100vh; /* ทำให้หน้าจอเต็ม */
     }
 
+
+
     .form-container {
       background-color: #ffffff; /* สีพื้นหลังของกล่อง */
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาของกล่อง */
-      width: 500px; /* ความกว้างของกล่อง */
+      box-shadow: 0 4px 2px rgba(34, 201, 89, 0.1); /* เงาของกล่อง */
+      width: 900px; /* ความกว้างของกล่อง */
+      height: 50vh; /* ความสูงของกล่อง */
+      border: 4px solid #000000;
     }
 
     .form-group img {
@@ -62,6 +68,24 @@
       margin-right: 5px;
     }
 
+    /* .snowflake {    หิมะ 71-87 
+      position: absolute;
+      top: -10px;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: snow 5s linear infinite;
+    }
+
+    @keyframes snow {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      100% {
+        transform: translateY(100vh) translateX(50vw);
+      }
+    } */
+
     button {
       margin-top: 10px;
       padding: 15px 100px;
@@ -69,17 +93,32 @@
       border: none;
       cursor: pointer;
       border-radius: 8px; /* ปรับมุมของปุ่มให้มน */
+      margin-left: 70px;
     }
 
     .confirm-btn {
-      background-color: rgb(120, 252, 32);
+      background-color: rgb(114, 238, 32);
       color: white;
+    }
+      /* เมื่อเมาส์ชี้ */
+    .confirm-btn:hover {
+      background-color: rgb(34, 201, 89); /* เปลี่ยนสีปุ่ม */
+      transform: scale(1.05); /* ขยายเล็กน้อย */
     }
 
     .cancel-btn {
       background-color: rgb(252, 32, 43);
       color: white;
     }
+
+      /* เมื่อเมาส์ชี้ */
+    .cancel-btn:hover {
+      background-color: rgb(189, 36, 36); /* เปลี่ยนสีปุ่ม */
+      transform: scale(1.05); /* ขยายเล็กน้อย */
+    }    
+
+
+    
   </style>
 </head>
 <body>
@@ -88,65 +127,65 @@
       <table border="0">
         <tr>
              <td style="width:80px;"></td>
-             <td style="width:600px;">
-                <label for="pick up">นัดรับบริการที่ :</label>
-                <input type="text" id="pick up" name="pick up" style="width: 200px;">
+             <td style="width:1000px;">
+                <label for="PickUp" ><b>นัดรับบริการที่ :</b></label>
+                <input type="text" id="PickUp" name="PickUp" style="width: 400px;height: 30px; font-size: 20px; margin-left: 80px;">
               </td>
-             <td style="width:200px;"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
+             <td style="width:200px;"><img src="https://via.placeholder.com/150" alt="Placeholder Image" style="width: 100px;height: 100px; ;"></style=>
         </tr>
         <tr>
              <td></td>
              <td colspan="2">
-              <label for="DateService">วันที่รับบริการ :</label>
-              <input type="date" id="DateService" name="DateService" style="width: 150px;">
-              <label for="TimeService">เวลา :</label>
-              <input type="time" id="TimeService" name="TimeService" style="width: 50px;">
-              <label for="DateService">น.</label>
+              <label for="DateService"><b>วันที่รับบริการ :</b></label>
+              <input type="date" id="DateService" name="DateService" style="width: 160px;height: 30px; font-size: 20px; margin-left: 83px;">
+              <label for="TimeService"style="margin-left: 40px;"><b>เวลา :</b></label>
+              <input type="time" id="TimeService" name="TimeService" style="width: 100px; font-size: 20px">
+              <label for="DateService"><b>น.</b></label>
             </td>
         </tr>
         <tr>
              <td></td>
              <td colspan="2">
-              <label for="HN">HN :</label>
-              <input type="text" id="HN" name="HN" style="width: 200px;">
+              <label for="HN"><b>HN :</b></label>
+              <input type="text" id="HN" name="HN" style="width: 400px;height: 30px; font-size: 20px;margin-left: 176px;">
             </td>
         </tr>
         <tr>
              <td></td>
              <td colspan="2">
-                <label for="name">ชื่อ-สกุล :</label>
-                <input type="text" id="name" name="name" style="width: 150px;">
-                <label for="age">อายุ :</label>
-                <input type="text" id="age" name="age" style="width: 50px;">
-                <label for="name">ปี</label>
+                <label for="Name"><b>ชื่อ-สกุล :</b></label>
+                <input type="text" id="Name" name="Name" style="width: 230px;height: 30px; font-size: 20px; margin-left: 130px;">
+                <label for="Age"style="margin-left: 10px;"><b>อายุ :</b></label>
+                <input type="text" id="Age" name="Age" style="width: 50px;height: 30px; font-size: 20px;">
+                <label for="name"><b>ปี</b></label>
             </td>
         </tr>
         <tr>
              <td></td>
              <td colspan="2">
-                <label for="telephone">เบอร์โทรศัพท์ :</label>
-                <input type="text" id="telephone" name="telephone" style="width: 200px;">
+                <label for="Telephone"><b>เบอร์โทรศัพท์ :</b></label>
+                <input type="text" id="Telephone" name="Telephone" style="width: 400px;height: 30px; font-size: 20px; margin-left: 81px;">
             </td>
         </tr>
         <tr>
              <td></td>
              <td colspan="2">
-                <label for="id">เลขประจำตัวประชาชน :</label>
-                <input type="text" id="telephone" name="id" style="width: 200px;">
+                <label for="Id"><b>เลขประจำตัวประชาชน :</b></label>
+                <input type="text" id="Id" name="Id" style="width: 400px;height: 30px; font-size: 20px; margin-left: 1px;">
             </td>
         </tr>
         <tr>
              <td></td>
              <td colspan="2">
-                <label for="docker">แพทย์ผู้นัด :</label>
-                <input type="text" id="docker" name="docker" style="width: 200px;">
+                <label for="Doctor"><b>แพทย์ผู้นัด :</b></label>
+                <input type="text" id="Doctor" name="Doctor" style="width: 400px;height: 30px; font-size: 20px; margin-left: 105px;">
             </td>
         </tr>
         <tr>
              <td></td>
              <td colspan="2">
-                <label for="rights">สิทธิการรักษา :</label>
-                <input type="text" id="rights" name="rights" style="width: 200px;">
+                <label for="Rights"><b>สิทธิการรักษา :</b></label>
+                <input type="text" id="Rights" name="Rights" style="width: 400px;height: 30px; font-size: 20px; margin-left: 80px;">
             </td>
         </tr>
    </table>
@@ -189,7 +228,7 @@
           <span>ปี</span>
         </div>
       </div>
-
+      
       <div class="form-group">
         <label for="telephone">เบอร์โทรศัพท์ :</label>
         <input type="text" id="telephone" name="telephone" style="width: 200px;">
@@ -210,8 +249,16 @@
         <input type="text" id="rights" name="rights" style="width: 200px;">
       </div> -->
 
+      <!-- หิมะ -->
+      <!-- <div class="snowflake" style="width: 10px; height: 10px; left: 10%; animation-duration: 4s;"></div>
+      <div class="snowflake" style="width: 12px; height: 12px; left: 20%; animation-duration: 6s;"></div>
+      <div class="snowflake" style="width: 8px; height: 8px; left: 30%; animation-duration: 5s;"></div>
+      <div class="snowflake" style="width: 15px; height: 15px; left: 40%; animation-duration: 7s;"></div>
+      <div class="snowflake" style="width: 10px; height: 10px; left: 50%; animation-duration: 5s;"></div> -->
+      <br>
       <button class="confirm-btn">ยืนยัน</button>
       <button class="cancel-btn">ยกเลิก</button>
+     
     </div>
   </form>
 </body>
