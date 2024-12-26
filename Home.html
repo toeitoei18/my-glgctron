@@ -85,8 +85,72 @@
 <body>
   <form id="authen-form">
     <div class="form-container">
-
-        <div class="form-group img">
+      <table border="0">
+        <tr>
+             <td style="width:80px;"></td>
+             <td style="width:600px;">
+                <label for="pick up">นัดรับบริการที่ :</label>
+                <input type="text" id="pick up" name="pick up" style="width: 200px;">
+              </td>
+             <td style="width:200px;"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
+        </tr>
+        <tr>
+             <td></td>
+             <td colspan="2">
+              <label for="DateService">วันที่รับบริการ :</label>
+              <input type="date" id="DateService" name="DateService" style="width: 150px;">
+              <label for="TimeService">เวลา :</label>
+              <input type="time" id="TimeService" name="TimeService" style="width: 50px;">
+              <label for="DateService">น.</label>
+            </td>
+        </tr>
+        <tr>
+             <td></td>
+             <td colspan="2">
+              <label for="HN">HN :</label>
+              <input type="text" id="HN" name="HN" style="width: 200px;">
+            </td>
+        </tr>
+        <tr>
+             <td></td>
+             <td colspan="2">
+                <label for="name">ชื่อ-สกุล :</label>
+                <input type="text" id="name" name="name" style="width: 150px;">
+                <label for="age">อายุ :</label>
+                <input type="text" id="age" name="age" style="width: 50px;">
+                <label for="name">ปี</label>
+            </td>
+        </tr>
+        <tr>
+             <td></td>
+             <td colspan="2">
+                <label for="telephone">เบอร์โทรศัพท์ :</label>
+                <input type="text" id="telephone" name="telephone" style="width: 200px;">
+            </td>
+        </tr>
+        <tr>
+             <td></td>
+             <td colspan="2">
+                <label for="id">เลขประจำตัวประชาชน :</label>
+                <input type="text" id="telephone" name="id" style="width: 200px;">
+            </td>
+        </tr>
+        <tr>
+             <td></td>
+             <td colspan="2">
+                <label for="docker">แพทย์ผู้นัด :</label>
+                <input type="text" id="docker" name="docker" style="width: 200px;">
+            </td>
+        </tr>
+        <tr>
+             <td></td>
+             <td colspan="2">
+                <label for="rights">สิทธิการรักษา :</label>
+                <input type="text" id="rights" name="rights" style="width: 200px;">
+            </td>
+        </tr>
+   </table>
+        <!-- <div class="form-group img">
             <div class="col-md-1 text-md-right" >
                 <img src="https://via.placeholder.com/150" alt="Placeholder Image">
             </div>     
@@ -144,7 +208,7 @@
       <div class="form-group">
         <label for="rights">สิทธิการรักษา :</label>
         <input type="text" id="rights" name="rights" style="width: 200px;">
-      </div>
+      </div> -->
 
       <button class="confirm-btn">ยืนยัน</button>
       <button class="cancel-btn">ยกเลิก</button>
